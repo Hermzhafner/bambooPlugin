@@ -6,6 +6,10 @@
         <param name="plugin-icon">images/pluginIcon.png</param>
         <param name="plugin-logo">images/pluginLogo.png</param>
     </plugin-info>
+    
+    <taskType key="RxExecuteTest" name="Execute Ranorex Test" class="com.Ranorex.hermz.bamboo.junittask.impl.ExecuteRanorexTask">
+  <description>A task that prints 'Hello, World!'</description>
+</taskType>
 
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="meinSuperArtefakt1337"/>
