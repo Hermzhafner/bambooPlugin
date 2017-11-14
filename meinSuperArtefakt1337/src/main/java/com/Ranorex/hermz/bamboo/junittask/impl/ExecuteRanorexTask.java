@@ -14,6 +14,8 @@ import com.atlassian.bamboo.task.TaskResult;
 import com.atlassian.bamboo.task.TaskResultBuilder;
 import com.atlassian.bamboo.task.TaskType;
 
+import edu.emory.mathcs.backport.java.util.Arrays;
+
 public class ExecuteRanorexTask implements TaskType {
 
 	@SuppressWarnings("deprecation")
@@ -42,11 +44,21 @@ public class ExecuteRanorexTask implements TaskType {
 		}
 	}
 
+	static String slName = "";
+
 	private int executeTest(TaskContext taskContext) throws IOException, InterruptedException {
+
 		taskContext.getBuildLogger().addBuildLogEntry(taskContext.getRootDirectory().getAbsolutePath());
 		File f = taskContext.getRootDirectory();
-		String s = f.getParentFile().getParentFile().getName() + ".exe";
-		String execFile = f.getAbsolutePath() + File.pathSeparator + s;
+
+		for (File file : f.listFiles()) {
+			if (file.getName().endsWith(".rxsln")) {
+				slName = file.getName().replaceAll(".rxsln", "");
+			}
+		}
+
+		String s = f.getName() + ".exe";
+		String execFile = f.getAbsolutePath() + "\\" + slName + "\\bin" + "\\Debug\\" + slName + ".exe";
 		File jFile = null;
 		int result = -1;
 
@@ -55,6 +67,8 @@ public class ExecuteRanorexTask implements TaskType {
 			this.wait(1000);
 		}
 		result = process.exitValue();
+
+		taskContext.getBuildLogger().addBuildLogEntry("Test executed. Result: " + result);
 
 		for (File currentfile : f.listFiles()) {
 			if (currentfile.getName().contains(".junit.xml")) {
