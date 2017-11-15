@@ -5,17 +5,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.Ranorex.hermz.bamboo.junittask</groupId>
-    <artifactId>meinSuperArtefakt1337</artifactId>
+    <groupId>com.Ranorex.bamboo.Plugin</groupId>
+    <artifactId>bamboo_RX_plugin</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <organization>
-        <name>Example Company</name>
-        <url>http://www.example.com/</url>
+        <name>Ranorex GmbH</name>
+        <url>http://www.ranorex.com/</url>
     </organization>
 
-    <name>meinSuperArtefakt1337</name>
-    <description>This is the com.Ranorex.hermz.bamboo.junittask:meinSuperArtefakt1337 plugin for Atlassian Bamboo.</description>
+    <name>bamboo_RX_plugin</name>
+    <description>This is the Ranorex plugin for Atlassian Bamboo.</description>
     <packaging>atlassian-plugin</packaging>
 
     <properties>
