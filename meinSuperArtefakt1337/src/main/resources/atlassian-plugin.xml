@@ -3,12 +3,12 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
+        <param name="plugin-icon">images/Ranorex-Icon.png</param>
+        <param name="plugin-logo">images/Ranorex-Icon.png</param>
     </plugin-info>
     
     <taskType key="RxExecuteTest" name="Execute Ranorex Test" class="com.Ranorex.hermz.bamboo.junittask.impl.ExecuteRanorexTask">
-  <description>A task that prints 'Hello, World!'</description>
+  <description>A task that executes a Ranorex Test Solution</description>
 </taskType>
 
     <!-- add our i18n resource -->
