@@ -3,23 +3,23 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
+        <param name="plugin-icon">images/Ranorex-Icon.png</param>
+        <param name="plugin-logo">images/Ranorex-Icon.png</param>
     </plugin-info>
     
     <taskType key="RxExecuteTest" name="Execute Ranorex Test" class="com.Ranorex.hermz.bamboo.junittask.impl.ExecuteRanorexTask">
-  <description>A task that prints 'Hello, World!'</description>
-</taskType>
+  		<description>A task that executes a Ranorex Test Solution</description>
+	</taskType>
 
     <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="meinSuperArtefakt1337"/>
+    <resource type="i18n" name="i18n" location="RXBambooPlugin"/>
     
     <!-- add our web resources -->
-    <web-resource key="meinSuperArtefakt1337-resources" name="meinSuperArtefakt1337 Web Resources">
+    <web-resource key="RXBambooPlugin-resources" name="RXBambooPlugin Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
         
-        <resource type="download" name="meinSuperArtefakt1337.css" location="/css/meinSuperArtefakt1337.css"/>
-        <resource type="download" name="meinSuperArtefakt1337.js" location="/js/meinSuperArtefakt1337.js"/>
+        <resource type="download" name="RXBambooPlugin.css" location="/css/RXBambooPlugin.css"/>
+        <resource type="download" name="RXBambooPlugin.js" location="/js/RXBambooPlugin.js"/>
         <resource type="download" name="images/" location="/images"/>
 
         <context>meinSuperArtefakt1337</context>

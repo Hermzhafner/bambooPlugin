@@ -4,8 +4,6 @@ import org.junit.Test;
 import com.Ranorex.hermz.bamboo.junittask.api.MyPluginComponent;
 import com.Ranorex.hermz.bamboo.junittask.impl.MyPluginComponentImpl;
 
-import static org.junit.Assert.assertEquals;
-
 public class MyComponentUnitTest
 {
     @Test
